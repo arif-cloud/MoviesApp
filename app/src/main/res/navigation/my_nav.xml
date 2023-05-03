@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.moviesapp.presentation.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.moviesapp.presentation.categories.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_genreFragment"
+            app:destination="@id/genreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.moviesapp.presentation.watch_list.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/genreFragment"
+        android:name="com.example.moviesapp.presentation.category_detail.GenreFragment"
+        android:label="fragment_genre"
+        tools:layout="@layout/fragment_genre" >
+        <argument
+            android:name="with_genre"
+            app:argType="com.example.moviesapp.domain.model.Genre" />
+        <action
+            android:id="@+id/action_genreFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
+</navigation>
