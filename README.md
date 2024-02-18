@@ -2,7 +2,6 @@
 Movies App is a Android project using [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction) and Modern Architecture
 
 ![movieJpeg](https://user-images.githubusercontent.com/73065590/236443971-b773ba90-bc54-435e-9daf-2b888b65a1c3.jpg)
-![movies-app](https://github.com/arif-cloud/MoviesApp/assets/73065590/58d38d2b-393a-49bd-a37c-6b99eb5aebe3)
 
 
 
